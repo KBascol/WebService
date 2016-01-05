@@ -1,0 +1,27 @@
+*.class
+*/target/*
+*/.settings/*
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+
+*.classpath
+*.MF
+*/build/*
+
+*.log
+
+IKYA/EarContent/*
+*/bin/*
+IKYA_EJB/.gitignore
+IKYA_CLIENT/.gitignore
+IKYA_JPA/.gitignore
