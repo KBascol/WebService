@@ -7,10 +7,10 @@ elementFormDefault="qualified">
 	<xs:element name="BookPurchaseOrder">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="client">
+				<xs:element name="client" minOccurs="1" maxOccurs="1">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+							<xs:element name="name" type="xs:string" maxOccurs="1"/>
 							
 							<xs:element name="age" minOccurs="0" maxOccurs="1">
 								<xs:simpleType>
@@ -21,13 +21,13 @@ elementFormDefault="qualified">
 								</xs:simpleType>
 							</xs:element>
 							
-							<xs:element name="adress">
+							<xs:element name="adress" maxOccurs="1">
 								<xs:complexType>
 									<xs:sequence>
-										<xs:element name="street" type="xs:string"/>
-										<xs:element name="city" type="xs:string"/>
-										<xs:element name="departement" type="xs:string"/>
-										<xs:element name="postalCode" type="xs:decimal"/>
+										<xs:element name="street" type="xs:string" maxOccurs="1"/>
+										<xs:element name="city" type="xs:string" maxOccurs="1"//>
+										<xs:element name="departement" type="xs:string" maxOccurs="1"//>
+										<xs:element name="postalCode" type="xs:decimal" maxOccurs="1"//>
 									</xs:sequence>
 								</xs:complexType>
 							</xs:element>
@@ -35,12 +35,12 @@ elementFormDefault="qualified">
 					</xs:complexType>
 				</xs:element>
 				
-				<xs:element name="book">
+				<xs:element name="book" minOccurs="1" maxOccurs="3">
 					<xs:complexType>
 						<xs:sequence>
-							<xs:element name="title" type="xs:string" />
+							<xs:element name="title" type="xs:string" maxOccurs="1"/>
 							
-							<xs:element name="author"minOccurs="1">
+							<xs:element name="author" minOccurs="1">
 								<xs:complexType>
 									<xs:sequence>
 										<xs:element name="name" type="xs:string"/>
@@ -48,7 +48,7 @@ elementFormDefault="qualified">
 										<xs:element name="age">
 											<xs:simpleType>
 												<xs:restriction base="xs:integer">
-													<xs:minInclusive value="12"/>
+													<xs:minInclusive value="0"/>
 													<xs:maxInclusive value="120"/>
 												</xs:restriction>
 											</xs:simpleType>
@@ -67,7 +67,7 @@ elementFormDefault="qualified">
 								</xs:simpleType>
 							</xs:element>
 										
-							<xs:element name="price" type="xs:decimal"/>
+							<xs:element name="price" type="xs:decimal" maxOccurs="1"/>
 						</xs:sequence>
 					</xs:complexType>
 				</xs:element>
