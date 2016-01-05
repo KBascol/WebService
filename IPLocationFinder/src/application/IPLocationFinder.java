@@ -1,9 +1,11 @@
 package application;
 
+import net.webservicex.GeoIP;
+
 public class IPLocationFinder {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		GeoIP g;
 
 	}
 
