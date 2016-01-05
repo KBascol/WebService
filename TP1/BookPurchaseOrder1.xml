@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BookPurchaseOrder>
+  <client>
+    <name>bascol</name>
+    <age>23</age>
+    <adress>
+      <street>13 rue du slip</street>
+      <city>saint etienne</city>
+      <departement>loire</departement>
+      <postalCode>42000</postalCode>
+    </adress>
+  </client>
+  <book>
+    <title>log horizon</title>
+    <author>
+      <name>mamare touno</name>
+      <nationality>japonais</nationality>
+      <age>42</age>
+    </author>
+    <vendor>Amazon</vendor>
+    <price>19.90</price>
+  </book>
+</BookPurchaseOrder>

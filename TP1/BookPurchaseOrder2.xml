@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BookPurchaseOrder>
+  <client>
+    <name>laoussing</name>
+    <age>23</age>
+    <adress>
+      <street>14 rue du string</street>
+      <city>saint paul</city>
+      <departement>reunion</departement>
+      <postalCode>97460</postalCode>
+    </adress>
+  </client>
+  <book>
+    <title>Perl pour les nuls</title>
+    <author>
+      <name>larry wall</name>
+      <nationality>americain</nationality>
+      <age>72</age>
+    </author>
+    <vendor>Chapitre</vendor>
+    <price>100</price>
+  </book>
+</BookPurchaseOrder>
