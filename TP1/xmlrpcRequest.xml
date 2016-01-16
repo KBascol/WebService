@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<methodCall>
+	<methodName>currencyConvertor</methodName>
+	<params>
+		<param>
+			<value><string>euro</string></value>
+			<value><string>dollar</string></value>
+			<value><double>51,15</double></value>
+		</param>
+	</params>
+</methodCall>
