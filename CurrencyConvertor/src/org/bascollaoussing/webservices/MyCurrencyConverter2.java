@@ -6,18 +6,18 @@ import java.util.List;
 import javax.jws.WebMethod;
 import javax.jws.WebService;
 
+
 @WebService
-public class MyCurrencyConvertor {
-	List<String> currenciesList = new ArrayList<String>();
-	
+public class MyCurrencyConverter2 {
+List<Currency> currenciesList = new ArrayList<Currency>();
 	
 	public void initializeList() {
-		currenciesList.add("euro");
-		currenciesList.add("dollar");
-		currenciesList.add("yen");
+		currenciesList.add(new Currency("euro", "UE", 1999));
+		currenciesList.add(new Currency("dollar", "USA", 1785));
+		currenciesList.add(new Currency("yen", "Japon", 1871));
 	}
 	
-	public List<String> getCurrenciesList() {
+	public List<Currency> getCurrenciesList() {
 		if(currenciesList.isEmpty()) {
 			initializeList();
 		}
@@ -25,6 +25,7 @@ public class MyCurrencyConvertor {
 		return currenciesList;
 	}
 	
+	@WebMethod(exclude=true)
 	public double convert ( String source, String destination, double amount) {
 		if("euro".equals(source)) {
 			if("dollar".equals(destination)) {
@@ -55,7 +56,7 @@ public class MyCurrencyConvertor {
 	}
 	
 	@WebMethod(exclude=true)
-	public boolean addCurrency(String name) {
-		return currenciesList.add(name);
+	public boolean addCurrency(Currency curr) {
+		return currenciesList.add(curr);
 	}
 }
